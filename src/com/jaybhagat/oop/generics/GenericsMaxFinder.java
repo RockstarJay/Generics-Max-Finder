@@ -1,7 +1,7 @@
 package com.jaybhagat.oop.generics;
 
 /*
- * class to find the maximum number form three double using generics
+ * class to find the max form three String using generics
  * @author com.jaybhagat
  */
 
@@ -11,30 +11,30 @@ public class GenericsMaxFinder {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.print("Enter First Double Number : ");
-		Double firstDoubleNumber = scanner.nextDouble();
+		System.out.print("Enter First String : ");
+		String firstString = scanner.next();
 		
-		System.out.print("Enter Second Double Number : ");
-		Double secondDoubleNumber = scanner.nextDouble();
+		System.out.print("Enter Second String : ");
+		String secondString = scanner.next();
 		
-		System.out.print("Enter Third Double Number : ");
-		Double thirdDoubleNumber = scanner.nextDouble();
+		System.out.print("Enter Third String : ");
+		String thirdString = scanner.next();
 		scanner.close();
 		
-		getMax(firstDoubleNumber,secondDoubleNumber,thirdDoubleNumber);   // method for Double
+		getMax(firstString,secondString,thirdString);   // method for Double
 	}
 	
 	/*
 	 * using generics type T which extends java comparable interface
-	 * java compareTo method to find maximum number using generics
+	 * java compareTo method to find max String using generics
 	 */
-	private static <T extends Comparable<T>> void getMax(T firstNumber, T secondNumber, T thirdNumber) {
-		T maxNumber = firstNumber;
+	private static <T extends Comparable<T>> void getMax(T firstString, T secondString, T thirdString) {
+		T maxString = firstString;
 		
-		if (secondNumber.compareTo(maxNumber) > 0)
-			maxNumber = secondNumber;
-		if (thirdNumber.compareTo(maxNumber) > 0)
-			maxNumber = thirdNumber;
-		System.out.println("The Maximum Number is : " +maxNumber);
+		if (secondString.compareTo(maxString) > 0)
+			maxString = secondString;
+		if (thirdString.compareTo(maxString) > 0)
+			maxString = thirdString;
+		System.out.println("The Max Sting is : " +maxString);
 	}
 }
