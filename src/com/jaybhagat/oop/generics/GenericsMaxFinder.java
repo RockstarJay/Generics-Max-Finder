@@ -1,40 +1,40 @@
 package com.jaybhagat.oop.generics;
 
 /*
- * class to find the max form three String using generics
+ * class to find the max form three Integers, Doubles, Strings using generics
  * @author com.jaybhagat
  */
 
-import java.util.Scanner;
-
 public class GenericsMaxFinder {
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
+		String firstString = "Apple";
+		String secondString = "Peach";
+		String thirdString = "Banana";
 		
-		System.out.print("Enter First String : ");
-		String firstString = scanner.next();
+		Integer firstIntNumber = 12;
+		Integer secondIntNumber = 15;
+		Integer thirdIntNumber = 20;
 		
-		System.out.print("Enter Second String : ");
-		String secondString = scanner.next();
+		Double firstDoubleNumber = 120.295;
+		Double secondDoubleNumber = 150.255;
+		Double thirdDoubleNumber = 200.326;
 		
-		System.out.print("Enter Third String : ");
-		String thirdString = scanner.next();
-		scanner.close();
-		
-		getMax(firstString,secondString,thirdString);   // method for Double
+		getMax(firstString,secondString,thirdString);                       // method for string
+		getMax(firstIntNumber,secondIntNumber,thirdIntNumber);              // method for integer
+		getMax(firstDoubleNumber,secondDoubleNumber,thirdDoubleNumber);     // method for double
 	}
 	
 	/*
 	 * using generics type T which extends java comparable interface
-	 * java compareTo method to find max String using generics
+	 * using java compareTo method to test maximum from Integer, Double and Strings
 	 */
-	private static <T extends Comparable<T>> void getMax(T firstString, T secondString, T thirdString) {
-		T maxString = firstString;
+	private static <T extends Comparable<T>> void getMax(T firstVar, T secondVar, T thirdVar) {
+		T maxVar = firstVar;
 		
-		if (secondString.compareTo(maxString) > 0)
-			maxString = secondString;
-		if (thirdString.compareTo(maxString) > 0)
-			maxString = thirdString;
-		System.out.println("The Max Sting is : " +maxString);
+		if (secondVar.compareTo(maxVar) > 0)
+			maxVar = secondVar;
+		if (thirdVar.compareTo(maxVar) > 0)
+			maxVar = thirdVar;
+		System.out.println("The Maximum is : " +maxVar);
 	}
 }
