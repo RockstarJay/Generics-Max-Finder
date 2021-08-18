@@ -21,7 +21,7 @@ public class GenericsMaxFinder {
 		String thirdString = scanner.next();
 		scanner.close();
 		
-		getMax(firstString,secondString,thirdString);   // method for Double
+		getMax(firstString,secondString,thirdString);   // method for String
 	}
 	
 	/*
