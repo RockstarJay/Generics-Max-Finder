@@ -1,7 +1,7 @@
 package com.jaybhagat.oop.generics;
 
 /*
- * class to find the maximum number form three integers using generics
+ * class to find the maximum number form three double using generics
  * @author com.jaybhagat
  */
 
@@ -11,22 +11,22 @@ public class GenericsMaxFinder {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.print("Enter First Number : ");
-		Integer firstIntNumber = scanner.nextInt();
+		System.out.print("Enter First Double Number : ");
+		Double firstDoubleNumber = scanner.nextDouble();
 		
-		System.out.print("Enter Second Number : ");
-		Integer secondIntNumber = scanner.nextInt();
+		System.out.print("Enter Second Double Number : ");
+		Double secondDoubleNumber = scanner.nextDouble();
 		
-		System.out.print("Enter Third Number : ");
-		Integer thirdIntNumber = scanner.nextInt();
+		System.out.print("Enter Third Double Number : ");
+		Double thirdDoubleNumber = scanner.nextDouble();
 		scanner.close();
 		
-		getMax(firstIntNumber,secondIntNumber,thirdIntNumber);   // method for integer
+		getMax(firstDoubleNumber,secondDoubleNumber,thirdDoubleNumber);   // method for Double
 	}
 	
 	/*
 	 * using generics type T which extends java comparable interface
-	 * java compareTo method to find maximum number
+	 * java compareTo method to find maximum number using generics
 	 */
 	private static <T extends Comparable<T>> void getMax(T firstNumber, T secondNumber, T thirdNumber) {
 		T maxNumber = firstNumber;
